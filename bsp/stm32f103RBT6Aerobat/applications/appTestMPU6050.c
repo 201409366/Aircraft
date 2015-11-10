@@ -136,26 +136,26 @@ static rt_uint8_t mpu6050_test(void)
     rt_device_t mpu6050 = RT_NULL;
     rt_uint8_t mpu6050_id = 0;
 	
-    mpu6050 = rt_device_find("mpu6050");
+    mpu6050 = rt_device_find("mpu605");
     while (mpu6050 == RT_NULL)
     {
         rt_kprintf("can not find mpu6050!\n");
         rt_hw_mpu6050_init("i2c1", MPU6050_DEFAULT_ADDRESS);
         rt_thread_delay(5);
-        mpu6050 = rt_device_find("mpu6050");
+        mpu6050 = rt_device_find("mpu605");
     }
 		
     rt_device_open(mpu6050, RT_DEVICE_FLAG_RDONLY);
     mpu6050->read(mpu6050, MPU6050_RA_WHO_AM_I, &mpu6050_id, 1);		
 		
-    rt_kprintf("mpu6050 id = %x\n", mpu6050_id);
+    rt_kprintf("mpu6050 id = 0x%x\n", mpu6050_id);
     if (mpu6050_id != 0x68)
         return 0;
     while (1)
     {
 			prepare_Data(mpu6050);	
-			IMUupdate(GYRO_X_I,GYRO_Y_I,GYRO_Z_I,ACC_X_AVG,ACC_Y_AVG,ACC_Z_AVG);
-      //rt_kprintf("%05d %05d %05d %05d %05d %05d\n", acc_x, acc_y, acc_z, gyro_x, gyro_y, gyro_z);
+			//IMUupdate(GYRO_X_I,GYRO_Y_I,GYRO_Z_I,ACC_X_AVG,ACC_Y_AVG,ACC_Z_AVG);
+      rt_kprintf("%05d %05d %05d %05d %05d %05d\n", acc_x, acc_y, acc_z, gyro_x, gyro_y, gyro_z);
       rt_thread_delay(10);
     }
     //return 0 ;

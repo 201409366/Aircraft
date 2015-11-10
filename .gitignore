@@ -3814,3 +3814,9 @@
 /bsp/stm32f103RBT6Aerobat/project_rtthread-stm32.dep
 /bsp/stm32f103RBT6Aerobat/project_uvopt.bak
 /bsp/stm32f103RBT6Board/project_uvopt.bak
+/bsp/simulator/Debug
+/bsp/simulator/nand.bin
+/bsp/simulator/project.sdf
+/bsp/simulator/sd.bin
+/bsp/stm32f103RBT6Aerobat/template.uvgui_yezi.bak
+/bsp/stm32f103RBT6Aerobat/template_uvopt.bak

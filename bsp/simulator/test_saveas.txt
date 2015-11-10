@@ -1,0 +1,14 @@
+Edit beta v0.1
+Hello RT-Thread
+this's edit demo
+rtgui_edit_create
+rtgui_edit_append_line
+rtgui_edit_insert_line
+rtgui_edit_delete_line
+rtgui_edit_connect_line
+Ë«×Ö½Ú²âÊÔ
+a
+b
+c
+d
+1234567890

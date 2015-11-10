@@ -3,7 +3,7 @@
 #define __RTTHREAD_CFG_H__
 
 /* RT_NAME_MAX*/
-#define RT_NAME_MAX	8
+#define RT_NAME_MAX	6
 
 /* RT_ALIGN_SIZE*/
 #define RT_ALIGN_SIZE	4
@@ -16,13 +16,13 @@
 
 /* SECTION: RT_DEBUG */
 /* Thread Debug */
-#define RT_DEBUG
-#define RT_THREAD_DEBUG
+//#define RT_DEBUG
+//#define RT_THREAD_DEBUG
 
-#define RT_USING_OVERFLOW_CHECK
+//#define RT_USING_OVERFLOW_CHECK
 
 /* Using Hook */
-#define RT_USING_HOOK
+//#define RT_USING_HOOK
 
 /* Using Software Timer */
 /* #define RT_USING_TIMER_SOFT */
@@ -77,7 +77,7 @@
 #define RT_CONSOLE_DEVICE_NAME	    "uart1"
 
 /* SECTION: finsh, a C-Express shell */
-#define RT_USING_FINSH
+//#define RT_USING_FINSH
 //#define FINSH_THREAD_PRIORITY   7
 /* Using symbol table */
 #define FINSH_USING_SYMTAB

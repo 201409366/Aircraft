@@ -1,6 +1,5 @@
 #include <rtthread.h>
 #include <rtdevice.h>
-#include <finsh.h>
 #include "drv_mpu6050.h"
 
 
@@ -139,7 +138,7 @@ void rt_hw_mpu6050_init(const char *i2c_bus_name, rt_uint16_t addr)
     device->control     = mpu6050_control;
     device->user_data   = mpu6050;
 
-    rt_device_register(device, "mpu6050", RT_DEVICE_FLAG_RDWR);
+    rt_device_register(device, "mpu605", RT_DEVICE_FLAG_RDWR);
 }
 static void mpu6050_write_bit(rt_device_t dev,rt_uint8_t reg, rt_uint8_t bitNum, rt_uint8_t data)
 {
