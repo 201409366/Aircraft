@@ -1,4 +1,4 @@
-﻿#include <rtthread.h>
+#include <rtthread.h>
 #include <board.h>
 #include <rtdevice.h>
 

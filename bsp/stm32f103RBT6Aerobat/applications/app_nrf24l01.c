@@ -1,4 +1,4 @@
-﻿#include "nRF24L01.h"
+#include "nRF24L01.h"
 #include <rtthread.h>
 #include "CommunicationProtocol.h"
 
@@ -79,3 +79,4 @@ void rt_appNRF24L01_thread_entry(void* parameter) {
 //				//rt_thread_delay(RT_TICK_PER_SECOND);
 //				break;  								
 //		}			  
+INIT_APP_EXPORT(appNRF24L01Init);

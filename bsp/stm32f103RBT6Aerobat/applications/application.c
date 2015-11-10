@@ -40,13 +40,6 @@
 #include <rtgui/calibration.h>
 #endif
 
-extern void rt_platform_init(void);
-extern rt_err_t appNRF24L01Init(void);
-extern rt_err_t appMachineInit(void);
-extern void appMpu6050Init(void);
-extern void appManagerInit(void);
-extern void appLEDInit(void);
-
 #ifdef RT_USING_RTGUI
 rt_bool_t cali_setup(void)
 {
@@ -76,8 +69,6 @@ void rt_init_thread_entry(void* parameter)
     rt_components_init();
 #endif
 
-	rt_platform_init();	
-	
 #ifdef  RT_USING_FINSH
     finsh_set_device(RT_CONSOLE_DEVICE_NAME);
 #endif  /* RT_USING_FINSH */
@@ -122,31 +113,7 @@ void rt_init_thread_entry(void* parameter)
         calibration_init();
     }
 #endif /* #ifdef RT_USING_RTGUI */
-		
-#ifdef RT_USING_NRF24L01
-		appNRF24L01Init();
-#endif /* RT_USING_NRF24L01 */	
-		
-#ifdef RT_USING_USARTAPP
-		appUsartInit();	
-#endif /* RT_USING_USARTAPP */
-
-#ifdef RT_USING_MACHINEAPP
-		appMachineInit();
-#endif /* RT_USING_MACHINEAPP */		
-
-#ifdef RT_USING_MPU6050APP
-		appMpu6050Init();
-#endif /* RT_USING_MACHINEAPP */		
-
-#ifdef RT_USING_MANAGERAPP
-		appManagerInit();
-#endif /* RT_USING_MACHINEAPP */				
-
-#ifdef RT_USING_LEDAPP
-		appLEDInit();
-#endif /* RT_USING_MACHINEAPP */	
-
+	
 }
 
 int rt_application_init(void)

@@ -135,6 +135,8 @@ static rt_uint8_t mpu6050_test(void)
 {
     rt_device_t mpu6050 = RT_NULL;
     rt_uint8_t mpu6050_id = 0;
+	  rt_uint8_t mpu_data[14];
+		rt_int16_t acc_x, acc_y, acc_z, gyro_x, gyro_y, gyro_z;
 	
     mpu6050 = rt_device_find("mpu605");
     while (mpu6050 == RT_NULL)
@@ -153,8 +155,16 @@ static rt_uint8_t mpu6050_test(void)
         return 0;
     while (1)
     {
-			prepare_Data(mpu6050);	
+			//prepare_Data(mpu6050);	
 			//IMUupdate(GYRO_X_I,GYRO_Y_I,GYRO_Z_I,ACC_X_AVG,ACC_Y_AVG,ACC_Z_AVG);
+			mpu6050->read(mpu6050, MPU6050_RA_ACCEL_XOUT_H, mpu_data, 14);
+			acc_x = ((mpu_data[0] << 8) | mpu_data[1]);
+			acc_y = ((mpu_data[2] << 8) | mpu_data[3]);
+			acc_z = ((mpu_data[4] << 8) | mpu_data[5]);
+			gyro_x = ((mpu_data[8] << 8) | mpu_data[9]);
+			gyro_y = ((mpu_data[10] << 8) | mpu_data[11]);
+			gyro_z = ((mpu_data[12] << 8) | mpu_data[13]);
+
       rt_kprintf("%05d %05d %05d %05d %05d %05d\n", acc_x, acc_y, acc_z, gyro_x, gyro_y, gyro_z);
       rt_thread_delay(10);
     }
@@ -168,3 +178,5 @@ static void rt_appMpu6050_thread_entry(void* parameter) {
 		rt_thread_delay(600);
 	}	
 }
+
+INIT_APP_EXPORT(appMpu6050Init);

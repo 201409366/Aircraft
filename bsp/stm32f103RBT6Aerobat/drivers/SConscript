@@ -10,7 +10,7 @@ board.c
 stm32f10x_it.c
 led.c
 usart.c
-nRF24L01.c
+nrf24l01.c
 platform.c
 machine.c
 drv_mpu6050.c

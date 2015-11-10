@@ -61,7 +61,7 @@ static void led_thread_entry(void* parameter)
     }
 }
 
-rt_err_t appLEDInit(void){	
+int appLEDInit(void){	
   
     rt_err_t result;
 	
@@ -82,3 +82,5 @@ rt_err_t appLEDInit(void){
 		
 		return RT_ERROR;
 }
+
+INIT_APP_EXPORT(appLEDInit);

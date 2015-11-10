@@ -12,7 +12,7 @@ static uint8_t buff[TX_PLOAD_WIDTH * 2];
 
 void rt_appManager_thread_entry(void* parameter);
 
-rt_err_t appManagerInit(void){
+int appManagerInit(void){
 	rt_thread_t init_thread;
 	
 	init_thread = rt_thread_create("appManager",
@@ -53,3 +53,4 @@ void rt_appManager_thread_entry(void* parameter) {
 		}
 	}
 }
+INIT_APP_EXPORT(appManagerInit);

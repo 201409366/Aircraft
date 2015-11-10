@@ -6,7 +6,7 @@ static rt_uint8_t buff[4];
 
 void rt_appMachine_thread_entry(void* parameter);
 
-rt_err_t appMachineInit(void){
+int appMachineInit(void){
 	rt_err_t status = RT_EOK;
 	rt_thread_t init_thread;
 	
@@ -49,3 +49,4 @@ void rt_appMachine_thread_entry(void* parameter) {
 		//rt_thread_delay(RT_TICK_PER_SECOND * 100);
 	}
 }
+INIT_APP_EXPORT(appMachineInit);

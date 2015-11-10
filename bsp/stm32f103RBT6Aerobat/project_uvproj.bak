@@ -403,37 +403,37 @@
           <GroupName>Applications</GroupName>
           <Files>
             <File>
-              <FileName>appLED.c</FileName>
+              <FileName>app_led.c</FileName>
               <FileType>1</FileType>
-              <FilePath>applications\appLED.c</FilePath>
+              <FilePath>applications\app_led.c</FilePath>
             </File>
           </Files>
           <Files>
             <File>
-              <FileName>appMachine.c</FileName>
+              <FileName>app_machine.c</FileName>
               <FileType>1</FileType>
-              <FilePath>applications\appMachine.c</FilePath>
+              <FilePath>applications\app_machine.c</FilePath>
             </File>
           </Files>
           <Files>
             <File>
-              <FileName>appManager.c</FileName>
+              <FileName>app_manager.c</FileName>
               <FileType>1</FileType>
-              <FilePath>applications\appManager.c</FilePath>
+              <FilePath>applications\app_manager.c</FilePath>
             </File>
           </Files>
           <Files>
             <File>
-              <FileName>appNRF24L01.c</FileName>
+              <FileName>app_nrf24l01.c</FileName>
               <FileType>1</FileType>
-              <FilePath>applications\appNRF24L01.c</FilePath>
+              <FilePath>applications\app_nrf24l01.c</FilePath>
             </File>
           </Files>
           <Files>
             <File>
-              <FileName>appTestMPU6050.c</FileName>
+              <FileName>app_test_mpu6050.c</FileName>
               <FileType>1</FileType>
-              <FilePath>applications\appTestMPU6050.c</FilePath>
+              <FilePath>applications\app_test_mpu6050.c</FilePath>
             </File>
           </Files>
           <Files>
@@ -483,9 +483,9 @@
           </Files>
           <Files>
             <File>
-              <FileName>nRF24L01.c</FileName>
+              <FileName>nrf24l01.c</FileName>
               <FileType>1</FileType>
-              <FilePath>drivers\nRF24L01.c</FilePath>
+              <FilePath>drivers\nrf24l01.c</FilePath>
             </File>
           </Files>
           <Files>
